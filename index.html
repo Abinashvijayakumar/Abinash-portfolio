@@ -10,72 +10,80 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto:wght@400;700&display=swap');
         
         /* Custom styles for neon effects and fonts */
+        
         :root {
             --bg-primary: #0A0F1E;
             --accent-cyan: #00F5FF;
             --neon-green: #39FF14;
         }
-
+        
         body {
             background-color: var(--bg-primary);
             color: white;
             font-family: 'Inter', sans-serif;
         }
-
+        
         .shadow-neon-cyan {
             text-shadow: 0 0 5px var(--accent-cyan), 0 0 10px var(--accent-cyan), 0 0 20px var(--accent-cyan), 0 0 30px var(--accent-cyan);
         }
-
+        
         .shadow-neon-green {
             box-shadow: 0 0 5px var(--neon-green), 0 0 10px var(--neon-green), 0 0 20px var(--neon-green);
         }
-
+        
         .hover\:shadow-neon-cyan:hover {
             box-shadow: 0 0 5px var(--accent-cyan), 0 0 10px var(--accent-cyan), 0 0 20px var(--accent-cyan), 0 0 30px var(--accent-cyan);
         }
-
+        
         .backdrop-blur-sm {
             -webkit-backdrop-filter: blur(4px);
             backdrop-filter: blur(4px);
         }
-
+        
         .swiper-pagination-bullet-active {
             background-color: var(--accent-cyan) !important;
         }
-
+        
         /* Styles for scroll animation */
+        
         .animated-section {
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 0.6s ease-out, transform 0.6s ease-out;
         }
+        
         .animated-section.is-visible {
             opacity: 1;
             transform: translateY(0);
         }
-
+        
         /* Specific font usage */
+        
         h1, h2, h3, h4, .font-roboto {
             font-family: 'Roboto', sans-serif;
         }
         
         /* Hero section animated background */
+        
         .hero-bg {
             background: linear-gradient(45deg, #0A0F1E, #1a202c, #0A0F1E);
             background-size: 400% 400%;
             animation: gradient-animation 10s ease infinite;
         }
+        
         @keyframes gradient-animation {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
-
+        
         /* Loading screen animation */
+        
         @keyframes neon-glow-pulse {
             0%, 100% { box-shadow: 0 0 5px var(--accent-cyan); }
             50% { box-shadow: 0 0 20px var(--accent-cyan); }
         }
+        
         #loading-screen .loader {
             animation: neon-glow-pulse 1.5s infinite;
         }
@@ -85,7 +93,7 @@
           display: inline-block;
           animation: loading-animation 1s infinite;
         }
-
+        
         @keyframes loading-animation {
           0% { content: '.'; }
           33% { content: '..'; }
@@ -117,7 +125,7 @@
                     <li><a href="#contact" class="hover:text-accent-cyan transition duration-300">Contact</a></li>
                     <li>
                         <!-- Corrected file path for the resume download -->
-                        <a href="/Abinash-portfolio/assets/Abinash_vijayakumar_resume.pdf" download class="flex items-center space-x-2 text-white bg-accent-cyan px-4 py-2 rounded-full hover:bg-white hover:text-background-primary transition duration-300">
+                        <a href="https://Abinashvijayakumar.github.io/Abinash-portfolio/assets/Abinash_vijayakumar_resume.pdf" download class="flex items-center space-x-2 text-white bg-accent-cyan px-4 py-2 rounded-full hover:bg-white hover:text-background-primary transition duration-300">
                             <!-- Lucide icons from a CDN -->
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
                             <span>Resume</span>
@@ -139,7 +147,7 @@
                         </h2>
                         <div class="mt-8 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
                             <a href="#projects" id="view-projects-btn" class="px-6 py-3 rounded-full bg-accent-cyan text-background-primary font-bold hover:bg-white transition-colors duration-300 shadow-neon-cyan">View Projects</a>
-                            <a href="/Abinash-portfolio/assets/Abinash_vijayakumar_resume.pdf" download class="px-6 py-3 rounded-full border-2 border-accent-cyan text-accent-cyan font-bold hover:bg-accent-cyan hover:text-background-primary transition-colors duration-300">Download Resume</a>
+                            <a href="/assets/Abinash_Vijayakumar_Resume.pdf" download class="px-6 py-3 rounded-full border-2 border-accent-cyan text-accent-cyan font-bold hover:bg-accent-cyan hover:text-background-primary transition-colors duration-300">Download Resume</a>
                         </div>
                     </div>
                     <div class="md:w-1/2 flex justify-center">
@@ -362,7 +370,7 @@
                         description: "Created an autonomous weather station for real-time weather monitoring, prediction, and emergency communication.",
                         techStack: ["Google Firebase", "Machine Learning", "IoT", "Embedded Systems"],
                         githubLink: "https://github.com/Abinashvijayakumar",
-                        image: "/Abinash-portfolio/assets/Disaster+System.png",
+                        image: "https://placehold.co/400x250/0A0F1E/00F5FF?text=Disaster+System",
                         caseStudy: {
                             whatIdid: "Created an autonomous weather station capable of real-time weather monitoring and prediction. Utilized Google Firebase for mobile integration and data storage. Implemented machine learning models for forecasting weather patterns.",
                             challenges: "Designed a portable, IoT-based solution leveraging AI and real-time datasets to enhance user accessibility and decision-making.",
@@ -374,7 +382,7 @@
                         description: "A portable IoT device with soil sensors for real-time data acquisition, connected to a Flutter-based mobile app via Firebase.",
                         techStack: ["ESP32", "Flutter", "Firebase", "AI/ML", "TensorFlow"],
                         githubLink: "https://github.com/Abinashvijayakumar",
-                        image: "/Abinash-portfolio/assets/Soil+Monitor.png",
+                        image: "https://placehold.co/400x250/0A0F1E/00F5FF?text=Soil+Monitor",
                         caseStudy: {
                             whatIdid: "Built a portable IoT device using ESP32 with soil sensors (pH, moisture, nutrient levels). Developed a Flutter-based mobile app with Firebase for live monitoring and visualization of soil parameters.",
                             challenges: "Integrating the various sensors with the ESP32 and ensuring a stable wireless connection to the app was a primary focus. I also implemented AI/ML models to analyze data and provide crop recommendations.",
@@ -388,7 +396,7 @@
                         description: "A software system using AI-driven optical character recognition (OCR) for automated college marksheet entry and database registration.",
                         techStack: ["AI/ML", "OCR"],
                         githubLink: "https://github.com/Abinashvijayakumar",
-                        image: "/Abinash-portfolio/assets/Marksheet+OCR.png",
+                        image: "https://placehold.co/400x250/0A0F1E/00F5FF?text=Marksheet+OCR",
                         caseStudy: {
                             whatIdid: "Powered a software system for automated college marksheet entry. Engineered AI-driven optical character recognition (OCR) models for precise marks detection and integrated the functionality to directly update a database.",
                             challenges: "The primary challenge was achieving high accuracy with varying marksheet formats and handwriting styles. We optimized the OCR models to handle these variations and provide seamless automation.",
@@ -403,41 +411,41 @@
                     title: "NPTEL - Basic in Semiconductor",
                     location: "Online",
                     year: "2024",
-                    image: "/Abinash-portfolio/assets/NPTEL+Course.png",
+                    image: "https://placehold.co/600x400/0A0F1E/39FF14?text=NPTEL+Course",
                 },
                 {
                     title: "Maven - Verilog and HDL",
                     location: "Online",
                     year: "2023",
-                    image: "/Abinash-portfolio/assets/Verilog+Course.png",
+                    image: "https://placehold.co/600x400/0A0F1E/39FF14?text=Verilog+Course",
                 },
                 {
                     title: "Kutty Electronic - PCB Designing",
                     location: "Online",
                     year: "2023",
-                    image: "/Abinash-portfolio/assets/PCB+Course.png",
+                    image: "https://placehold.co/600x400/0A0F1E/39FF14?text=PCB+Course",
                 },
             ];
 
             const certificationsData = [
                 {
                     title: "NPTEL- Basic in Semiconductor",
-                    image: "/Abinash-portfolio/assets/NPTEL.png",
+                    image: "https://placehold.co/600x400/0A0F1E/00F5FF?text=NPTEL",
                     link: "#",
                 },
                 {
                     title: "Maven - Verilog and HDL",
-                    image: "/Abinash-portfolio/assets/Verilog.png",
+                    image: "https://placehold.co/600x400/0A0F1E/00F5FF?text=Verilog",
                     link: "#",
                 },
                 {
                     title: "Kutty Electronic - PCB Designing",
-                    image: "/Abinash-portfolio/assets/PCB+Designing.png",
+                    image: "https://placehold.co/600x400/0A0F1E/00F5FF?text=PCB+Designing",
                     link: "#",
                 },
                 {
                     title: "MATLAB/Simulation workshops",
-                    image: "/Abinash-portfolio/assets/MATLAB.png",
+                    image: "https://placehold.co/600x400/0A0F1E/00F5FF?text=MATLAB",
                     link: "#",
                 },
             ];
@@ -718,7 +726,7 @@
             // Function to generate and display QR code
             const generateQrCode = () => {
                 if (!qrCodeContainer) return;
-                const currentUrl = "https://Abinashvijayakumar.github.io/Abinash-portfolio/";
+                const currentUrl = window.location.href;
                 qrCodeContainer.innerHTML = '';
                 const qrcode = new QRCode(qrCodeContainer, {
                     text: currentUrl,
