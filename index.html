@@ -10,80 +10,72 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto:wght@400;700&display=swap');
         
         /* Custom styles for neon effects and fonts */
-        
         :root {
             --bg-primary: #0A0F1E;
             --accent-cyan: #00F5FF;
             --neon-green: #39FF14;
         }
-        
+
         body {
             background-color: var(--bg-primary);
             color: white;
             font-family: 'Inter', sans-serif;
         }
-        
+
         .shadow-neon-cyan {
             text-shadow: 0 0 5px var(--accent-cyan), 0 0 10px var(--accent-cyan), 0 0 20px var(--accent-cyan), 0 0 30px var(--accent-cyan);
         }
-        
+
         .shadow-neon-green {
             box-shadow: 0 0 5px var(--neon-green), 0 0 10px var(--neon-green), 0 0 20px var(--neon-green);
         }
-        
+
         .hover\:shadow-neon-cyan:hover {
             box-shadow: 0 0 5px var(--accent-cyan), 0 0 10px var(--accent-cyan), 0 0 20px var(--accent-cyan), 0 0 30px var(--accent-cyan);
         }
-        
+
         .backdrop-blur-sm {
             -webkit-backdrop-filter: blur(4px);
             backdrop-filter: blur(4px);
         }
-        
+
         .swiper-pagination-bullet-active {
             background-color: var(--accent-cyan) !important;
         }
-        
+
         /* Styles for scroll animation */
-        
         .animated-section {
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 0.6s ease-out, transform 0.6s ease-out;
         }
-        
         .animated-section.is-visible {
             opacity: 1;
             transform: translateY(0);
         }
-        
+
         /* Specific font usage */
-        
         h1, h2, h3, h4, .font-roboto {
             font-family: 'Roboto', sans-serif;
         }
         
         /* Hero section animated background */
-        
         .hero-bg {
             background: linear-gradient(45deg, #0A0F1E, #1a202c, #0A0F1E);
             background-size: 400% 400%;
             animation: gradient-animation 10s ease infinite;
         }
-        
         @keyframes gradient-animation {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
-        
+
         /* Loading screen animation */
-        
         @keyframes neon-glow-pulse {
             0%, 100% { box-shadow: 0 0 5px var(--accent-cyan); }
             50% { box-shadow: 0 0 20px var(--accent-cyan); }
         }
-        
         #loading-screen .loader {
             animation: neon-glow-pulse 1.5s infinite;
         }
@@ -93,7 +85,7 @@
           display: inline-block;
           animation: loading-animation 1s infinite;
         }
-        
+
         @keyframes loading-animation {
           0% { content: '.'; }
           33% { content: '..'; }
@@ -124,7 +116,8 @@
                     <li><a href="#certifications" class="hover:text-accent-cyan transition duration-300">Certifications</a></li>
                     <li><a href="#contact" class="hover:text-accent-cyan transition duration-300">Contact</a></li>
                     <li>
-                        <a href="I:\job and work\portfolio\abinash-portfolio\assets\Abinash_vijayakumar_resume.pdf" download class="flex items-center space-x-2 text-white bg-accent-cyan px-4 py-2 rounded-full hover:bg-white hover:text-background-primary transition duration-300">
+                        <!-- Corrected file path for the resume download -->
+                        <a href="/Abinash-portfolio/assets/Abinash_vijayakumar_resume.pdf" download class="flex items-center space-x-2 text-white bg-accent-cyan px-4 py-2 rounded-full hover:bg-white hover:text-background-primary transition duration-300">
                             <!-- Lucide icons from a CDN -->
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
                             <span>Resume</span>
@@ -146,7 +139,7 @@
                         </h2>
                         <div class="mt-8 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
                             <a href="#projects" id="view-projects-btn" class="px-6 py-3 rounded-full bg-accent-cyan text-background-primary font-bold hover:bg-white transition-colors duration-300 shadow-neon-cyan">View Projects</a>
-                            <a href="/assets/Abinash_Vijayakumar_Resume.pdf" download class="px-6 py-3 rounded-full border-2 border-accent-cyan text-accent-cyan font-bold hover:bg-accent-cyan hover:text-background-primary transition-colors duration-300">Download Resume</a>
+                            <a href="/Abinash-portfolio/assets/Abinash_vijayakumar_resume.pdf" download class="px-6 py-3 rounded-full border-2 border-accent-cyan text-accent-cyan font-bold hover:bg-accent-cyan hover:text-background-primary transition-colors duration-300">Download Resume</a>
                         </div>
                     </div>
                     <div class="md:w-1/2 flex justify-center">
@@ -323,6 +316,12 @@
                                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent-cyan"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
                                     <a href="https://linkedin.com/in/abinash-vijayakumar-253401240" target="_blank" rel="noopener noreferrer" class="text-lg text-gray-300 hover:text-white transition-colors duration-300">linkedin.com/in/abinash-vijayakumar-253401240</a>
                                 </div>
+                                <div class="mt-8">
+                                    <button id="generate-qr-btn" class="px-6 py-3 rounded-full bg-accent-cyan text-background-primary font-bold hover:bg-white transition-colors duration-300 shadow-neon-cyan">
+                                        Generate QR Code
+                                    </button>
+                                    <div id="qr-code-container" class="mt-4 flex justify-center"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -350,6 +349,8 @@
 
     <!-- Swiper JS from CDN -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- QR Code Library from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -361,7 +362,7 @@
                         description: "Created an autonomous weather station for real-time weather monitoring, prediction, and emergency communication.",
                         techStack: ["Google Firebase", "Machine Learning", "IoT", "Embedded Systems"],
                         githubLink: "https://github.com/Abinashvijayakumar",
-                        image: "https://placehold.co/400x250/0A0F1E/00F5FF?text=Disaster+System",
+                        image: "/Abinash-portfolio/assets/Disaster+System.png",
                         caseStudy: {
                             whatIdid: "Created an autonomous weather station capable of real-time weather monitoring and prediction. Utilized Google Firebase for mobile integration and data storage. Implemented machine learning models for forecasting weather patterns.",
                             challenges: "Designed a portable, IoT-based solution leveraging AI and real-time datasets to enhance user accessibility and decision-making.",
@@ -373,7 +374,7 @@
                         description: "A portable IoT device with soil sensors for real-time data acquisition, connected to a Flutter-based mobile app via Firebase.",
                         techStack: ["ESP32", "Flutter", "Firebase", "AI/ML", "TensorFlow"],
                         githubLink: "https://github.com/Abinashvijayakumar",
-                        image: "https://placehold.co/400x250/0A0F1E/00F5FF?text=Soil+Monitor",
+                        image: "/Abinash-portfolio/assets/Soil+Monitor.png",
                         caseStudy: {
                             whatIdid: "Built a portable IoT device using ESP32 with soil sensors (pH, moisture, nutrient levels). Developed a Flutter-based mobile app with Firebase for live monitoring and visualization of soil parameters.",
                             challenges: "Integrating the various sensors with the ESP32 and ensuring a stable wireless connection to the app was a primary focus. I also implemented AI/ML models to analyze data and provide crop recommendations.",
@@ -387,7 +388,7 @@
                         description: "A software system using AI-driven optical character recognition (OCR) for automated college marksheet entry and database registration.",
                         techStack: ["AI/ML", "OCR"],
                         githubLink: "https://github.com/Abinashvijayakumar",
-                        image: "https://placehold.co/400x250/0A0F1E/00F5FF?text=Marksheet+OCR",
+                        image: "/Abinash-portfolio/assets/Marksheet+OCR.png",
                         caseStudy: {
                             whatIdid: "Powered a software system for automated college marksheet entry. Engineered AI-driven optical character recognition (OCR) models for precise marks detection and integrated the functionality to directly update a database.",
                             challenges: "The primary challenge was achieving high accuracy with varying marksheet formats and handwriting styles. We optimized the OCR models to handle these variations and provide seamless automation.",
@@ -402,41 +403,41 @@
                     title: "NPTEL - Basic in Semiconductor",
                     location: "Online",
                     year: "2024",
-                    image: "https://placehold.co/600x400/0A0F1E/39FF14?text=NPTEL+Course",
+                    image: "/Abinash-portfolio/assets/NPTEL+Course.png",
                 },
                 {
                     title: "Maven - Verilog and HDL",
                     location: "Online",
                     year: "2023",
-                    image: "https://placehold.co/600x400/0A0F1E/39FF14?text=Verilog+Course",
+                    image: "/Abinash-portfolio/assets/Verilog+Course.png",
                 },
                 {
                     title: "Kutty Electronic - PCB Designing",
                     location: "Online",
                     year: "2023",
-                    image: "https://placehold.co/600x400/0A0F1E/39FF14?text=PCB+Course",
+                    image: "/Abinash-portfolio/assets/PCB+Course.png",
                 },
             ];
 
             const certificationsData = [
                 {
                     title: "NPTEL- Basic in Semiconductor",
-                    image: "https://placehold.co/600x400/0A0F1E/00F5FF?text=NPTEL",
+                    image: "/Abinash-portfolio/assets/NPTEL.png",
                     link: "#",
                 },
                 {
                     title: "Maven - Verilog and HDL",
-                    image: "https://placehold.co/600x400/0A0F1E/00F5FF?text=Verilog",
+                    image: "/Abinash-portfolio/assets/Verilog.png",
                     link: "#",
                 },
                 {
                     title: "Kutty Electronic - PCB Designing",
-                    image: "https://placehold.co/600x400/0A0F1E/00F5FF?text=PCB+Designing",
+                    image: "/Abinash-portfolio/assets/PCB+Designing.png",
                     link: "#",
                 },
                 {
                     title: "MATLAB/Simulation workshops",
-                    image: "https://placehold.co/600x400/0A0F1E/00F5FF?text=MATLAB",
+                    image: "/Abinash-portfolio/assets/MATLAB.png",
                     link: "#",
                 },
             ];
@@ -463,6 +464,8 @@
             const aboutSummaryEl = document.getElementById('about-summary');
             const generateFunFactBtn = document.getElementById('generate-fun-fact-btn');
             const funFactEl = document.getElementById('fun-fact');
+            const generateQrBtn = document.getElementById('generate-qr-btn');
+            const qrCodeContainer = document.getElementById('qr-code-container');
 
 
             let activeTab = 'hardware'; // Changed default tab to 'hardware'
@@ -512,6 +515,7 @@
             
             // Functions to render content
             const renderProjectCards = (tab) => {
+                if (!projectsContainer) return;
                 projectsContainer.innerHTML = '';
                 const projects = projectsData[tab];
                 projects.forEach(project => {
@@ -538,6 +542,7 @@
             };
 
             const showProjectModal = (project) => {
+                if (!projectModal) return;
                 modalContent.innerHTML = `
                     <h2 class="text-3xl font-roboto font-bold text-accent-cyan mb-4">${project.title}</h2>
                     <p class="text-lg text-gray-300 mb-6">${project.description}</p>
@@ -571,50 +576,55 @@
                 const whatIDidEl = document.getElementById('case-study-what-i-did');
                 const challengesEl = document.getElementById('case-study-challenges');
                 const outcomeEl = document.getElementById('case-study-outcome');
+                
+                if (generateCaseStudyBtn) {
+                  generateCaseStudyBtn.addEventListener('click', async () => {
+                      const originalWhatIDid = project.caseStudy.whatIdid;
+                      const originalChallenges = project.caseStudy.challenges;
+                      const originalOutcome = project.caseStudy.outcome;
+                      const prompt = `Based on the following project details, expand on the "What I Did," "Challenges," and "Outcome" sections to sound more professional and detailed. Return the output as a JSON object with keys: whatIdid, challenges, and outcome.
+                                      Project Title: ${project.title}
+                                      What I Did: ${originalWhatIDid}
+                                      Challenges: ${originalChallenges}
+                                      Outcome: ${originalOutcome}
+                                      Tech Stack: ${project.techStack.join(', ')}
+                                      `;
+                      
+                      generateCaseStudyBtn.disabled = true;
+                      generateCaseStudyBtn.innerHTML = 'Generating<span class="loading-dots"></span>';
 
-                generateCaseStudyBtn.addEventListener('click', async () => {
-                    const originalWhatIDid = project.caseStudy.whatIdid;
-                    const originalChallenges = project.caseStudy.challenges;
-                    const originalOutcome = project.caseStudy.outcome;
-                    const prompt = `Based on the following project details, expand on the "What I Did," "Challenges," and "Outcome" sections to sound more professional and detailed. Return the output as a JSON object with keys: whatIdid, challenges, and outcome.
-                                    Project Title: ${project.title}
-                                    What I Did: ${originalWhatIDid}
-                                    Challenges: ${originalChallenges}
-                                    Outcome: ${originalOutcome}
-                                    Tech Stack: ${project.techStack.join(', ')}
-                                    `;
-                    
-                    generateCaseStudyBtn.disabled = true;
-                    generateCaseStudyBtn.innerHTML = 'Generating<span class="loading-dots"></span>';
-
-                    try {
-                        const generatedContent = await callGeminiAPI(prompt);
-                        const parsedContent = JSON.parse(generatedContent);
-                        if (parsedContent.whatIdid) whatIDidEl.textContent = parsedContent.whatIdid;
-                        if (parsedContent.challenges) challengesEl.textContent = parsedContent.challenges;
-                        if (parsedContent.outcome) outcomeEl.textContent = parsedContent.outcome;
-                    } catch (e) {
-                        console.error('Failed to generate case study:', e);
-                        whatIDidEl.textContent = originalWhatIDid;
-                        challengesEl.textContent = originalChallenges;
-                        outcomeEl.textContent = originalOutcome;
-                    } finally {
-                        generateCaseStudyBtn.disabled = false;
-                        generateCaseStudyBtn.innerHTML = '✨ Generate Case Study';
-                    }
-                });
+                      try {
+                          const generatedContent = await callGeminiAPI(prompt);
+                          const parsedContent = JSON.parse(generatedContent);
+                          if (parsedContent.whatIdid) whatIDidEl.textContent = parsedContent.whatIdid;
+                          if (parsedContent.challenges) challengesEl.textContent = parsedContent.challenges;
+                          if (parsedContent.outcome) outcomeEl.textContent = parsedContent.outcome;
+                      } catch (e) {
+                          console.error('Failed to generate case study:', e);
+                          whatIDidEl.textContent = originalWhatIDid;
+                          challengesEl.textContent = originalChallenges;
+                          outcomeEl.textContent = originalOutcome;
+                      } finally {
+                          generateCaseStudyBtn.disabled = false;
+                          generateCaseStudyBtn.innerHTML = '✨ Generate Case Study';
+                      }
+                  });
+                }
             };
 
-            closeModalBtn.addEventListener('click', () => {
-                projectModal.classList.add('hidden');
-                document.body.classList.remove('overflow-hidden');
-            });
+            if (closeModalBtn) {
+                closeModalBtn.addEventListener('click', () => {
+                    projectModal.classList.add('hidden');
+                    document.body.classList.remove('overflow-hidden');
+                });
+            }
 
             const renderSkillPanels = () => {
                 const softwareSkills = ["Python", "Java", "C", "AI/ML (TensorFlow, PyTorch)", "Flutter", "Firebase", "Android Studio", "Kali Linux", "VS Code", "VLSI & HDL Languages (Xilinx Vivada)"];
                 const hardwareSkills = ["Digital & Analog Circuit Design", "PCB Design(Eagle, KiCAd)", "Embedded Systems (Arduino, ESP32)", "Hardware Troubleshooting & Testing", "Circuit Simulation Tools (Proteus, Ltspice, Multisim)", "IoT Hardware Integration", "Signal Processing Basics", "Basic of plc"];
 
                 const renderPanel = (panel, title, skills) => {
+                    if (!panel) return;
                     panel.innerHTML = `
                         <h3 class="text-3xl font-roboto font-bold text-accent-cyan mb-6 text-center">${title}</h3>
                         <ul class="space-y-4 font-inter">
@@ -632,6 +642,7 @@
             };
 
             const updateEventsList = (activeIndex) => {
+                if (!eventsList) return;
                 const listItems = eventsList.querySelectorAll('li');
                 listItems.forEach((item, index) => {
                     if (index === activeIndex) {
@@ -649,6 +660,7 @@
             };
 
             const renderEvents = () => {
+                if (!eventsList || !eventsCarousel) return;
                 eventsList.innerHTML = '';
                 eventsCarousel.innerHTML = '';
 
@@ -679,6 +691,7 @@
             };
 
             const renderCertifications = () => {
+                if (!certificationsCarousel) return;
                 certificationsCarousel.innerHTML = '';
                 certificationsData.forEach(cert => {
                     const slide = document.createElement('div');
@@ -701,162 +714,195 @@
                     }
                 });
             }, { threshold: 0.1 });
+            
+            // Function to generate and display QR code
+            const generateQrCode = () => {
+                if (!qrCodeContainer) return;
+                const currentUrl = "https://Abinashvijayakumar.github.io/Abinash-portfolio/";
+                qrCodeContainer.innerHTML = '';
+                const qrcode = new QRCode(qrCodeContainer, {
+                    text: currentUrl,
+                    width: 150,
+                    height: 150,
+                    colorDark: "#00F5FF",
+                    colorLight: "#0A0F1E",
+                    correctLevel: QRCode.CorrectLevel.H
+                });
+            };
 
             // Event Listeners
-            softwareTab.addEventListener('click', () => {
-                activeTab = 'software';
-                softwareTab.classList.add('bg-accent-cyan', 'text-background-primary', 'shadow-neon-cyan');
-                softwareTab.classList.remove('bg-gray-800', 'text-white', 'hover:bg-accent-cyan', 'hover:text-background-primary');
-                hardwareTab.classList.remove('bg-accent-cyan', 'text-background-primary', 'shadow-neon-cyan');
-                hardwareTab.classList.add('bg-gray-800', 'text-white', 'hover:bg-accent-cyan', 'hover:text-background-primary');
-                renderProjectCards(activeTab);
-            });
+            if (softwareTab && hardwareTab) {
+                softwareTab.addEventListener('click', () => {
+                    activeTab = 'software';
+                    softwareTab.classList.add('bg-accent-cyan', 'text-background-primary', 'shadow-neon-cyan');
+                    softwareTab.classList.remove('bg-gray-800', 'text-white', 'hover:bg-accent-cyan', 'hover:text-background-primary');
+                    hardwareTab.classList.remove('bg-accent-cyan', 'text-background-primary', 'shadow-neon-cyan');
+                    hardwareTab.classList.add('bg-gray-800', 'text-white', 'hover:bg-accent-cyan', 'hover:text-background-primary');
+                    renderProjectCards(activeTab);
+                });
+                hardwareTab.addEventListener('click', () => {
+                    activeTab = 'hardware';
+                    hardwareTab.classList.add('bg-accent-cyan', 'text-background-primary', 'shadow-neon-cyan');
+                    hardwareTab.classList.remove('bg-gray-800', 'text-white', 'hover:bg-accent-cyan', 'hover:text-background-primary');
+                    softwareTab.classList.remove('bg-accent-cyan', 'text-background-primary', 'shadow-neon-cyan');
+                    softwareTab.classList.add('bg-gray-800', 'text-white', 'hover:bg-accent-cyan', 'hover:text-background-primary');
+                    renderProjectCards(activeTab);
+                });
+            }
 
-            hardwareTab.addEventListener('click', () => {
-                activeTab = 'hardware';
-                hardwareTab.classList.add('bg-accent-cyan', 'text-background-primary', 'shadow-neon-cyan');
-                hardwareTab.classList.remove('bg-gray-800', 'text-white', 'hover:bg-accent-cyan', 'hover:text-background-primary');
-                softwareTab.classList.remove('bg-accent-cyan', 'text-background-primary', 'shadow-neon-cyan');
-                softwareTab.classList.add('bg-gray-800', 'text-white', 'hover:bg-accent-cyan', 'hover:text-background-primary');
-                renderProjectCards(activeTab);
-            });
+            if (viewProjectsBtn) {
+                viewProjectsBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
+                });
+            }
 
-            viewProjectsBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
-            });
+            if (navbar) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 50) {
+                        navbar.classList.add('bg-background-primary/80', 'backdrop-blur-sm');
+                    } else {
+                        navbar.classList.remove('bg-background-primary/80', 'backdrop-blur-sm');
+                    }
+                });
+            }
 
+            if (sendMessageBtn) {
+                sendMessageBtn.addEventListener('click', (e) => {
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const message = document.getElementById('message').value;
 
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 50) {
-                    navbar.classList.add('bg-background-primary/80', 'backdrop-blur-sm');
-                } else {
-                    navbar.classList.remove('bg-background-primary/80', 'backdrop-blur-sm');
-                }
-            });
-
-            sendMessageBtn.addEventListener('click', (e) => {
-                const name = document.getElementById('name').value;
-                const email = document.getElementById('email').value;
-                const message = document.getElementById('message').value;
-
-                if (name && email && message) {
-                    // Update this email with your actual email address
-                    const mailtoLink = `mailto:Abikai2007@gmail.com?subject=Portfolio Inquiry from ${name}&body=${message}`;
-                    window.location.href = mailtoLink;
-                } else {
-                    // Simple custom message box for user feedback
-                    const messageBox = document.createElement('div');
-                    messageBox.textContent = "Please fill out all fields.";
-                    messageBox.className = "fixed bottom-5 right-5 bg-red-600 text-white p-4 rounded-lg shadow-lg z-50";
-                    document.body.appendChild(messageBox);
-                    setTimeout(() => {
-                        document.body.removeChild(messageBox);
-                    }, 3000);
-                }
-            });
+                    if (name && email && message) {
+                        const mailtoLink = `mailto:Abikai2007@gmail.com?subject=Portfolio Inquiry from ${name}&body=${message}`;
+                        window.location.href = mailtoLink;
+                    } else {
+                        const messageBox = document.createElement('div');
+                        messageBox.textContent = "Please fill out all fields.";
+                        messageBox.className = "fixed bottom-5 right-5 bg-red-600 text-white p-4 rounded-lg shadow-lg z-50";
+                        document.body.appendChild(messageBox);
+                        setTimeout(() => {
+                            document.body.removeChild(messageBox);
+                        }, 3000);
+                    }
+                });
+            }
             
-            generateSummaryBtn.addEventListener('click', async () => {
-                const originalSummary = aboutSummaryEl.textContent;
-                generateSummaryBtn.disabled = true;
-                generateSummaryBtn.innerHTML = 'Generating<span class="loading-dots"></span>';
-                const prompt = `You are a professional developer. Write a new, compelling professional summary for a portfolio website based on the following text. The user is an electronics engineer with a strong focus on VLSI and embedded systems. Keep it concise and impactful.
-                Original summary: "I am a versatile developer with a keen interest in new tech. Experienced leader with a strong background in guiding teams, managing complex projects, and achieving strategic objectives. I excel in developing efficient processes, ensuring high standards, and aligning efforts with organizational goals. I am known for my collaborative approach and commitment to excellence."`;
-                
-                try {
-                    const generatedText = await callGeminiAPI(prompt);
-                    aboutSummaryEl.textContent = generatedText;
-                } catch (e) {
-                    console.error('Failed to generate summary:', e);
-                    aboutSummaryEl.textContent = originalSummary;
-                } finally {
-                    generateSummaryBtn.disabled = false;
-                    generateSummaryBtn.innerHTML = '✨ Generate Summary';
-                }
-            });
+            if (generateSummaryBtn) {
+                generateSummaryBtn.addEventListener('click', async () => {
+                    const originalSummary = aboutSummaryEl.textContent;
+                    generateSummaryBtn.disabled = true;
+                    generateSummaryBtn.innerHTML = 'Generating<span class="loading-dots"></span>';
+                    const prompt = `You are a professional developer. Write a new, compelling professional summary for a portfolio website based on the following text. The user is an electronics engineer with a strong focus on VLSI and embedded systems. Keep it concise and impactful.
+                    Original summary: "As a driven Electronics Engineer with a strong foundation in VLSI and embedded systems, I am passionate about creating tangible solutions that bridge the gap between hardware and software. I leverage my expertise in circuit design, IoT integration, and microcontroller programming to build innovative projects. My proficiency in software, including AI/ML and app development, serves to enhance the functionality and user experience of my hardware-focused work. I am a collaborative leader dedicated to problem-solving and technical excellence."`;
+                    
+                    try {
+                        const generatedText = await callGeminiAPI(prompt);
+                        if (aboutSummaryEl) aboutSummaryEl.textContent = generatedText;
+                    } catch (e) {
+                        console.error('Failed to generate summary:', e);
+                        if (aboutSummaryEl) aboutSummaryEl.textContent = originalSummary;
+                    } finally {
+                        generateSummaryBtn.disabled = false;
+                        generateSummaryBtn.innerHTML = '✨ Generate Summary';
+                    }
+                });
+            }
 
-            generateFunFactBtn.addEventListener('click', async () => {
-                const originalFunFact = funFactEl.textContent;
-                generateFunFactBtn.disabled = true;
-                generateFunFactBtn.innerHTML = 'Generating<span class="loading-dots"></span>';
-                const prompt = "Generate a short, humorous fun fact or a witty quote about a software developer's life, coding, or engineering. Make it relatable.";
-                
-                try {
-                    const generatedText = await callGeminiAPI(prompt);
-                    funFactEl.textContent = generatedText;
-                } catch (e) {
-                    console.error('Failed to generate fun fact:', e);
-                    funFactEl.textContent = originalFunFact;
-                } finally {
-                    generateFunFactBtn.disabled = false;
-                    generateFunFactBtn.innerHTML = '✨ Generate Fun Fact';
-                }
-            });
+            if (generateFunFactBtn) {
+                generateFunFactBtn.addEventListener('click', async () => {
+                    const originalFunFact = funFactEl.textContent;
+                    generateFunFactBtn.disabled = true;
+                    generateFunFactBtn.innerHTML = 'Generating<span class="loading-dots"></span>';
+                    const prompt = "Generate a short, humorous fun fact or a witty quote about a software developer's life, coding, or engineering. Make it relatable.";
+                    
+                    try {
+                        const generatedText = await callGeminiAPI(prompt);
+                        if (funFactEl) funFactEl.textContent = generatedText;
+                    } catch (e) {
+                        console.error('Failed to generate fun fact:', e);
+                        if (funFactEl) funFactEl.textContent = originalFunFact;
+                    } finally {
+                        generateFunFactBtn.disabled = false;
+                        generateFunFactBtn.innerHTML = '✨ Generate Fun Fact';
+                    }
+                });
+            }
+            
+            if (generateQrBtn) {
+                generateQrBtn.addEventListener('click', () => {
+                    generateQrCode();
+                });
+            }
 
 
             // Initial render
             setTimeout(() => {
-                loadingScreen.classList.add('hidden');
-                mainContent.classList.remove('hidden');
+                if (loadingScreen) loadingScreen.classList.add('hidden');
+                if (mainContent) mainContent.classList.remove('hidden');
                 renderProjectCards(activeTab);
                 renderSkillPanels();
                 renderEvents();
                 renderCertifications();
 
                 // Initialize Swipers after content is rendered
-                mySwiper = new Swiper('.mySwiper', {
-                    loop: true,
-                    autoplay: {
-                        delay: 3000,
-                        disableOnInteraction: false,
-                    },
-                    pagination: {
-                        el: '.swiper-pagination',
-                        clickable: true,
-                    },
-                    on: {
-                        init: (swiper) => {
-                            updateEventsList(swiper.realIndex);
+                if (document.querySelector('.mySwiper')) {
+                    mySwiper = new Swiper('.mySwiper', {
+                        loop: true,
+                        autoplay: {
+                            delay: 3000,
+                            disableOnInteraction: false,
                         },
-                        slideChange: (swiper) => {
-                            updateEventsList(swiper.realIndex);
+                        pagination: {
+                            el: '.swiper-pagination',
+                            clickable: true,
+                        },
+                        on: {
+                            init: (swiper) => {
+                                updateEventsList(swiper.realIndex);
+                            },
+                            slideChange: (swiper) => {
+                                updateEventsList(swiper.realIndex);
+                            }
                         }
-                    }
-                });
+                    });
+                }
 
-                certificationsSwiper = new Swiper('.certificationsSwiper', {
-                    loop: true,
-                    autoplay: {
-                        delay: 4000, // A slightly slower speed for certifications
-                        disableOnInteraction: false,
-                    },
-                    pagination: {
-                        el: '.swiper-pagination',
-                        clickable: true,
-                    },
-                    effect: 'coverflow',
-                    grabCursor: true,
-                    centeredSlides: true,
-                    slidesPerView: 'auto',
-                    coverflowEffect: {
-                      rotate: 50,
-                      stretch: 0,
-                      depth: 100,
-                      modifier: 1,
-                      slideShadows: true,
-                    },
-                    breakpoints: {
-                      640: {
-                        slidesPerView: 1.5,
-                      },
-                      768: {
-                        slidesPerView: 2,
-                      },
-                      1024: {
-                        slidesPerView: 2.5,
-                      },
-                    },
-                });
+                if (document.querySelector('.certificationsSwiper')) {
+                    certificationsSwiper = new Swiper('.certificationsSwiper', {
+                        loop: true,
+                        autoplay: {
+                            delay: 4000, // A slightly slower speed for certifications
+                            disableOnInteraction: false,
+                        },
+                        pagination: {
+                            el: '.swiper-pagination',
+                            clickable: true,
+                        },
+                        effect: 'coverflow',
+                        grabCursor: true,
+                        centeredSlides: true,
+                        slidesPerView: 'auto',
+                        coverflowEffect: {
+                          rotate: 50,
+                          stretch: 0,
+                          depth: 100,
+                          modifier: 1,
+                          slideShadows: true,
+                        },
+                        breakpoints: {
+                          640: {
+                            slidesPerView: 1.5,
+                          },
+                          768: {
+                            slidesPerView: 2,
+                          },
+                          1024: {
+                            slidesPerView: 2.5,
+                          },
+                        },
+                    });
+                }
 
                 // Observe sections for scroll animation
                 document.querySelectorAll('.animated-section').forEach(section => {
