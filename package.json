@@ -1,12 +1,10 @@
 {
-  "name": "abinash-portfolio",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "homepage": "https://Abinashvijayakumar.github.io/Abinash-portfolio/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "vite": "^7.1.2"
@@ -15,3 +13,4 @@
     "gh-pages": "^6.3.0"
   }
 }
+
